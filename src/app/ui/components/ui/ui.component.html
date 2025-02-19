@@ -1,0 +1,14 @@
+<div class="h100vh">
+  <div class="d-grid" style="grid-template-rows: auto 2fr">
+    <div class="bg-body-tertiary border">
+      <!-- a la place de ce ng-contend qui ne sera pas rendu dans le dom se trouve les 
+         elements htmls ou angular components qui se trouvent entre <app-ui> et </app-ui> dans le dom
+         là où je décide d'instancier app-ui -->
+      <ng-content></ng-content>
+    </div>
+    <div class="bg-body-tertiary border">
+      <!-- <router-outlet></router-outlet> -->
+      contenu dynamique de mes pages en fn de la route
+    </div>
+  </div>
+</div>

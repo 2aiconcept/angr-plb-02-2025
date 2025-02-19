@@ -1,0 +1,51 @@
+{
+  "users": [],
+  "settings": [
+    {
+      "device": "Mobile",
+      "id": "1"
+    }
+  ],
+  "orders": [
+    {
+      "unitPrice": 1200,
+      "nbOfDays": 2,
+      "vat": 20,
+      "state": "CONFIRMED",
+      "type": "formation",
+      "customer": "capgemini",
+      "comment": "un commentaire",
+      "id": "1"
+    },
+    {
+      "id": "e792",
+      "unitPrice": 1200,
+      "nbOfDays": 2,
+      "vat": 20,
+      "state": "CONFIRMED",
+      "type": "formation",
+      "customer": "capgemini",
+      "comment": "un commentaire"
+    },
+    {
+      "id": "d453",
+      "unitPrice": 1200,
+      "nbOfDays": 2,
+      "vat": 20,
+      "state": "CONFIRMED",
+      "type": "formation",
+      "customer": "capgemini",
+      "comment": "un commentaire"
+    }
+  ],
+  "customers": [
+    {
+      "state": "INACTIVE",
+      "vat": 20,
+      "totalInTaxes": 120000,
+      "id": "2",
+      "name": "Modis",
+      "comment": "un comment pour client modis"
+    }
+  ]
+}

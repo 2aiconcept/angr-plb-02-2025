@@ -1,5 +1,16 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "christophegueroult@gmail.com",
+      "password": "$2a$10$lJJcPIbXX.UTBWxs0k3eB.KTJyNcoI59/BftGlZBr6lOy5CNNBr/i",
+      "id": 1
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$9LnHByFLfV9a.BSsVH7m7umUo9bxXOQR0hlXbVlDq289sXSDgFVnW",
+      "id": 2
+    }
+  ],
   "settings": [
     {
       "device": "Mobile",

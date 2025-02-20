@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { IconProfileComponent } from '../../../icons/components/icon-profile/icon-profile.component';
 
 @Component({
   selector: 'app-profile-settings',
-  imports: [],
+  imports: [IconProfileComponent],
   templateUrl: './profile-settings.component.html',
-  styleUrl: './profile-settings.component.scss'
+  styleUrl: './profile-settings.component.scss',
 })
-export class ProfileSettingsComponent {
-
-}
+export class ProfileSettingsComponent {}

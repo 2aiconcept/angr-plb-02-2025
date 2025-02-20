@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IconProfileComponent } from '../../../icons/components/icon-profile/icon-profile.component';
 import { NgClass } from '@angular/common';
 
@@ -10,11 +10,9 @@ import { NgClass } from '@angular/common';
 })
 export class ProfileSettingsComponent {
   @Input() isUiSidenav!: boolean;
-  constructor() {}
-  ngOnInit() {
-    console.log(this.isUiSidenav);
-  }
-  ngOnChanges() {
-    console.log('valeur input' + this.isUiSidenav);
+  @Output() iSUiChange = new EventEmitter<boolean>();
+
+  changeUi() {
+    this.iSUiChange.emit();
   }
 }

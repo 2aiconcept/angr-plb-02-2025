@@ -8,6 +8,7 @@
     <app-profile-settings
       class="tr-settings"
       [isUiSidenav]="isUiSidenav"
+      (iSUiChange)="change()"
     ></app-profile-settings>
   </app-header>
 </app-ui>
@@ -21,5 +22,6 @@
   <app-profile-settings
     class="tr-settings"
     [isUiSidenav]="isUiSidenav"
+    (iSUiChange)="change()"
   ></app-profile-settings>
 </app-ui-sidenav>

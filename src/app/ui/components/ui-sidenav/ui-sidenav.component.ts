@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-ui-sidenav',
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './ui-sidenav.component.html',
-  styleUrl: './ui-sidenav.component.scss'
+  styleUrl: './ui-sidenav.component.scss',
 })
-export class UiSidenavComponent {
-
-}
+export class UiSidenavComponent {}

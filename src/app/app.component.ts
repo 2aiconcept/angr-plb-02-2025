@@ -11,7 +11,6 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     UiComponent,
     HeaderComponent,
     NavComponent,

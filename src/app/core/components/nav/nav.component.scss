@@ -1,0 +1,16 @@
+.icon {
+  font-size: 18px;
+}
+
+.active,
+a:hover {
+  background: var(--bs-primary);
+}
+
+.sidenav.active,
+.sidenav:hover {
+  color: var(--bs-white) !important;
+  background: var(--bs-primary);
+  border-radius: 10px;
+  border: 1px solid white;
+}

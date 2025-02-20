@@ -1,1 +1,22 @@
-<p>ui-sidenav works!</p>
+<div class="container-fluid pb-3 h100vh">
+  <div class="d-grid gap-3" style="grid-template-columns: auto 2fr">
+    <div class="bg-body-tertiary border rounded-3">
+      <div style="width: 280px" class="d-flex h-100 flex-column container">
+        <div class="icon-app">
+          <ng-content select=".tr-icon-app"></ng-content>
+        </div>
+        <hr />
+        <div class="flex-grow-1">
+          <ng-content select=".tr-nav"></ng-content>
+        </div>
+        <hr />
+        <div class="profile">
+          <ng-content select=".tr-settings"></ng-content>
+        </div>
+      </div>
+    </div>
+    <div class="bg-body-tertiary border rounded-3">
+      <!-- <router-outlet></router-outlet> -->
+    </div>
+  </div>
+</div>

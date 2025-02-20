@@ -1,9 +1,25 @@
-<app-ui>
-  <!-- ici tous le html qui se trouve sur ui-component.html auf si ng-content dans ui-component-html-->
+<app-ui *ngIf="!isUiSidenav">
   <app-header>
-    <!-- template html de header component et les projections si ng-content -->
-    <app-icon-bootstrap class="tr-icon-app"></app-icon-bootstrap>
+    <app-icon-bootstrap
+      class="tr-icon-app"
+      (click)="change()"
+    ></app-icon-bootstrap>
     <app-nav class="tr-nav"></app-nav>
-    <app-profile-settings class="tr-settings"></app-profile-settings>
+    <app-profile-settings
+      class="tr-settings"
+      [isUiSidenav]="isUiSidenav"
+    ></app-profile-settings>
   </app-header>
 </app-ui>
+
+<app-ui-sidenav *ngIf="isUiSidenav">
+  <app-icon-bootstrap
+    class="tr-icon-app"
+    (click)="change()"
+  ></app-icon-bootstrap>
+  <app-nav class="tr-nav"></app-nav>
+  <app-profile-settings
+    class="tr-settings"
+    [isUiSidenav]="isUiSidenav"
+  ></app-profile-settings>
+</app-ui-sidenav>

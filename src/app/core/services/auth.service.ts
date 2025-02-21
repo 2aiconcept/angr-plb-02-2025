@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
 
@@ -11,6 +11,8 @@ export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
   private url = environment.urlApi;
+  user$ = new BehaviorSubject<any>(null);
+  token$ = new BehaviorSubject<string | null>(null);
 
   // signup
   signUp(item: any): Observable<any> {
@@ -21,5 +23,25 @@ export class AuthService {
         }
       })
     );
+  }
+
+  // signin
+  public signIn(credentials: {
+    email: string;
+    password: string;
+  }): Observable<any> {
+    return this.http
+      .post<any>(`${environment.urlApi}/signin`, credentials)
+      .pipe(
+        tap((data) => {
+          // console.log(data);
+          this.user$.next(data.user);
+          // save user and faketoken dans local storage
+          // localStorage.setItem('user', JSON.stringify(this.user));
+          localStorage.setItem('token', JSON.stringify(data.accessToken));
+          this.token$.next(data.accessToken);
+          this.router.navigate(['orders']);
+        })
+      );
   }
 }

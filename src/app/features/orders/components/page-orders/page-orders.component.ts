@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-page-orders',
   imports: [],
   templateUrl: './page-orders.component.html',
-  styleUrl: './page-orders.component.scss'
+  styleUrl: './page-orders.component.scss',
 })
-export class PageOrdersComponent {
-
-}
+export class PageOrdersComponent {}

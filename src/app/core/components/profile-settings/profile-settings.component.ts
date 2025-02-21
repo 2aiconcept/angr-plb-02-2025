@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { IconProfileComponent } from '../../../icons/components/icon-profile/icon-profile.component';
 import { NgClass } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-profile-settings',
@@ -11,8 +12,13 @@ import { NgClass } from '@angular/common';
 export class ProfileSettingsComponent {
   @Input() isUiSidenav!: boolean;
   @Output() iSUiChange = new EventEmitter<boolean>();
+  authService = inject(AuthService);
 
   changeUi() {
     this.iSUiChange.emit();
+  }
+
+  signOut() {
+    this.authService.signOut();
   }
 }

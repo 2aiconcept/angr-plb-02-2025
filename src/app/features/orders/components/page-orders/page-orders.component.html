@@ -1,1 +1,59 @@
-<p>page-orders works!</p>
+<div class="d-flex align-items-center container-fluid mt-3">
+  <a class="btn btn-primary" role="button" routerLink="./add"> Add element </a>
+
+  <form class="ms-3" role="search">
+    <input
+      type="search"
+      class="form-control"
+      placeholder="Search..."
+      aria-label="Search"
+    />
+  </form>
+</div>
+
+<hr />
+
+<div
+  class="table-responsive container-fluid"
+  *ngIf="collection$ | async as collection"
+>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <td>Customer</td>
+        <td>Type</td>
+        <td>Duration</td>
+        <td>Unit Price</td>
+        <td>Total ex VAT</td>
+        <td>Total inc VAT</td>
+        <td>State</td>
+        <td>Actions</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <td>{{ item.customer }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.nbOfDays }}</td>
+        <td>{{ item.unitPrice }}</td>
+        <td>{{ item }}</td>
+        <td>{{ item }}</td>
+        <td>
+          <select class="form-select" aria-label="Default select example">
+            <option
+              *ngFor="let state of states"
+              [ngValue]="state"
+              [selected]="state === item.state"
+            >
+              {{ state }}
+            </option>
+          </select>
+        </td>
+        <td>
+          <app-icon-edit class="me-2 icons"></app-icon-edit>
+          <app-icon-delete class="me-2 icons"></app-icon-delete>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

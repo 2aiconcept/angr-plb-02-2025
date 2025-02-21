@@ -23,9 +23,7 @@ export class PageSignUpComponent {
   signUp() {
     const user = this.form.value;
     // console.log(user);
-    this.auth.signUp(user).subscribe((data) => {
-      console.log(data);
-    });
+    this.auth.signUp(user).subscribe();
   }
 
   ngOnInit() {

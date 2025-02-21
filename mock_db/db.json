@@ -11,6 +11,20 @@
       "firstname": "CHRISTOPHE",
       "lastName": "GUEROULT",
       "id": 2
+    },
+    {
+      "email": "christophegueroult3@gmail.com",
+      "password": "$2a$10$ZbJK1AFxcxdC8BIUeOTEeuam4LBlWr3YaUHCpJeV1C5ttwgKylVly",
+      "firstname": "GUEROULT",
+      "lastName": "CHRISTOPHE",
+      "id": 3
+    },
+    {
+      "email": "contact2@2ai-group.com",
+      "password": "$2a$10$.Io9R9ezUFuyq3oCBBCcPOEVKi1MErvX3UefV0EusP7UBg9J/9OA2",
+      "firstname": "CHRISTOPHE",
+      "lastName": "GUEROULT",
+      "id": 4
     }
   ],
   "settings": [

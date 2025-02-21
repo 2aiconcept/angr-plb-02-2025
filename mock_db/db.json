@@ -1,13 +1,15 @@
 {
   "users": [
     {
-      "email": "christophegueroult@gmail.com",
-      "password": "$2a$10$lJJcPIbXX.UTBWxs0k3eB.KTJyNcoI59/BftGlZBr6lOy5CNNBr/i",
+      "email": "christophe@gmail.com",
+      "password": "$2a$10$hdbf1UHf4hc1bWiMjk8MyuHIc.NCxfCi4jW39kcKvEO6NnTJfjznG",
       "id": 1
     },
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$9LnHByFLfV9a.BSsVH7m7umUo9bxXOQR0hlXbVlDq289sXSDgFVnW",
+      "email": "contact@2ai-group.com",
+      "password": "$2a$10$LqzBX3tCLM5OBiwvqZFk3.skFkfafqhF1b9WwI3HWStyYhmYvWd3K",
+      "firstname": "CHRISTOPHE",
+      "lastName": "GUEROULT",
       "id": 2
     }
   ],

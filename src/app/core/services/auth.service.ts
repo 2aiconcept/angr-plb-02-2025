@@ -44,4 +44,13 @@ export class AuthService {
         })
       );
   }
+
+  public signOut(): void {
+    // vider token du localStorage
+    // vider User$ et token$
+    localStorage.removeItem('token');
+    this.token$.next(null);
+    this.user$.next(null);
+    this.router.navigate(['auth/sign-in']);
+  }
 }

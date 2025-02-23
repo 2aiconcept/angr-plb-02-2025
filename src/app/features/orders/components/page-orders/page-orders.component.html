@@ -32,12 +32,12 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of collection">
-        <td>{{ item.customer }}</td>
+        <td>{{ item.customer | uppercase }}</td>
         <td>{{ item.type }}</td>
         <td>{{ item.nbOfDays }}</td>
-        <td>{{ item.unitPrice }}</td>
-        <td>{{ item }}</td>
-        <td>{{ item }}</td>
+        <td>{{ item.unitPrice | currency }}</td>
+        <td>Total HT à calculer</td>
+        <td>Total TTC à calculer</td>
         <td>
           <select class="form-select" aria-label="Default select example">
             <option

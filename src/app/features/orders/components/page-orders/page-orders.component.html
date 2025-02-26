@@ -31,7 +31,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of collection">
+      <tr *ngFor="let item of collection" [appState]="item.state">
         <td>{{ item.customer | uppercase }}</td>
         <td>{{ item.type }}</td>
         <td>{{ item.nbOfDays }}</td>

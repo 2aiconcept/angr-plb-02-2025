@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { StateOrder } from '../../enums/state-order';
 import { TotalPipe } from '../../../../shared/pipes/total.pipe';
 import { Order } from '../../models/order';
+import { StateDirective } from '../../../../shared/directives/state.directive';
 
 @Component({
   selector: 'app-page-orders',
@@ -26,6 +27,7 @@ import { Order } from '../../models/order';
     UpperCasePipe,
     CurrencyPipe,
     TotalPipe,
+    StateDirective,
   ],
   templateUrl: './page-orders.component.html',
   styleUrl: './page-orders.component.scss',

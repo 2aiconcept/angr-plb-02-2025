@@ -14,6 +14,7 @@ import { StateOrder } from '../../enums/state-order';
 import { TotalPipe } from '../../../../shared/pipes/total.pipe';
 import { Order } from '../../models/order';
 import { StateDirective } from '../../../../shared/directives/state.directive';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-orders',
@@ -36,6 +37,7 @@ export class PageOrdersComponent {
   private ordersService = inject(OrdersService);
   collection$ = this.ordersService.collection;
   states = Object.values(StateOrder);
+  private router = inject(Router);
 
   changeState(item: Order, event: Event) {
     // console.log(item);
@@ -47,5 +49,9 @@ export class PageOrdersComponent {
       // item = res;
       Object.assign(item, res);
     });
+  }
+
+  goToEdit(id: string) {
+    this.router.navigate(['orders', 'edit', id]);
   }
 }

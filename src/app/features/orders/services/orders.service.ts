@@ -49,5 +49,13 @@ export class OrdersService {
 
   // delete order
 
-  // get order by id
+  /**
+   * @function getItemById
+   * @param {id: string}
+   * @description http.get(..../id)
+   * @return Observable<Order>
+   */
+  public getItemById(id: string): Observable<Order> {
+    return this.http.get<Order>(`${this.url}/orders/${id}`);
+  }
 }

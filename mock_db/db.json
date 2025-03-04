@@ -35,7 +35,7 @@
   ],
   "orders": [
     {
-      "unitPrice": 1200,
+      "unitPrice": 1500,
       "nbOfDays": 2,
       "vat": 20,
       "state": "OPTION",

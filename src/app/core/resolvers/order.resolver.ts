@@ -1,6 +1,6 @@
 import { inject } from '@angular/core';
 import { ResolveFn } from '@angular/router';
-import { catchError, of } from 'rxjs';
+import { catchError, map, of } from 'rxjs';
 import { OrdersService } from '../../features/orders/services/orders.service';
 import { Order } from '../../features/orders/models/order';
 
@@ -14,6 +14,9 @@ export const orderResolver: ResolveFn<Order | null> = (route, state) => {
   return inject(OrdersService)
     .getItemById(id)
     .pipe(
+      map((data) => {
+        return new Order(data);
+      }),
       catchError((error) => {
         // Gérer l'erreur, par exemple en redirigeant l'utilisateur
         // ou en retournant une valeur par défaut

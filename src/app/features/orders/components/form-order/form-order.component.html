@@ -1,0 +1,89 @@
+<div class="card mt-3">
+  <div class="card-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="type" class="form-label">Type</label>
+        <input
+          formControlName="type"
+          type="text"
+          class="form-control"
+          id="type"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="form.get('type')?.invalid && form.get('type')?.touched"
+        >
+          champ invalid
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="customer" class="form-label">Customer</label>
+        <input
+          formControlName="customer"
+          type="text"
+          class="form-control"
+          id="customer"
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="form.get('customer')?.invalid && form.get('customer')?.touched"
+        >
+          champ invalid
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="nbOfDays" class="form-label">Nb Of Days</label>
+        <input
+          formControlName="nbOfDays"
+          type="number"
+          class="form-control"
+          id="nbOfDays"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="unitPrice" class="form-label">Unit Price</label>
+        <input
+          formControlName="unitPrice"
+          type="number"
+          class="form-control"
+          id="unitPrice"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="vat" class="form-label">VAT</label>
+        <input
+          formControlName="vat"
+          type="number"
+          class="form-control"
+          id="vat"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="state" class="form-label">State</label>
+        <select formControlName="state" class="form-control" id="state">
+          <option *ngFor="let state of states" [ngValue]="state">
+            {{ state }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comment" class="form-label">Comment</label>
+        <textarea
+          formControlName="comment"
+          class="form-control mb-3"
+          id="comment"
+        ></textarea>
+      </div>
+
+      <button [disabled]="form.invalid" type="submit" class="btn btn-primary">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

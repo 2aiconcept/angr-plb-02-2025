@@ -1,1 +1,7 @@
-<p>page-add-order works!</p>
+<div class="container">
+  <app-form-order
+    *ngIf="item"
+    [initItem]="item"
+    (submited)="save($event)"
+  ></app-form-order>
+</div>

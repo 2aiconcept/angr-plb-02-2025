@@ -14,7 +14,7 @@ import { StateOrder } from '../../enums/state-order';
 import { TotalPipe } from '../../../../shared/pipes/total.pipe';
 import { Order } from '../../models/order';
 import { StateDirective } from '../../../../shared/directives/state.directive';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-page-orders',
@@ -29,6 +29,7 @@ import { Router } from '@angular/router';
     CurrencyPipe,
     TotalPipe,
     StateDirective,
+    RouterLink,
   ],
   templateUrl: './page-orders.component.html',
   styleUrl: './page-orders.component.scss',

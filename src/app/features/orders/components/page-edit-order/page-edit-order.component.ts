@@ -16,10 +16,9 @@ export class PageEditOrderComponent {
   private route = inject(ActivatedRoute);
   private ordersService = inject(OrdersService);
   private router = inject(Router);
-  item$!: Observable<any>;
+  item!: Order;
   ngOnInit() {
-    this.item$ = this.route.data;
-    // this.route.data.subscribe((data) => console.log(data));
+    this.route.data.subscribe((data) => (this.item = data['order']));
   }
 
   public save(item: Order) {

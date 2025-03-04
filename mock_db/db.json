@@ -35,7 +35,7 @@
   ],
   "orders": [
     {
-      "unitPrice": 1500,
+      "unitPrice": 1200,
       "nbOfDays": 2,
       "vat": 20,
       "state": "OPTION",
@@ -63,6 +63,16 @@
       "type": "formation",
       "customer": "capgemini",
       "comment": "un commentaire"
+    },
+    {
+      "unitPrice": 500,
+      "nbOfDays": 5,
+      "vat": 20,
+      "state": "OPTION",
+      "type": "Formation",
+      "customer": "PLB",
+      "comment": "sdfg",
+      "id": "fdwknQR"
     }
   ],
   "customers": [

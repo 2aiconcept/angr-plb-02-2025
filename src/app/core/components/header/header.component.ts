@@ -14,7 +14,7 @@ export class HeaderComponent {
   user!: any;
   ngOnInit() {
     this.authService.user$.subscribe((data) => {
-      console.log(data);
+      // console.log(data);
 
       this.user = data;
     });

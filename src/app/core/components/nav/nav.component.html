@@ -12,7 +12,9 @@
       <span class="icon" [ngClass]="isUiSidenav ? 'me-3' : 'mx-3'">
         <app-icon-dashbord></app-icon-dashbord>
       </span>
-      <span [ngClass]="isUiSidenav ? '' : 'd-block'">dashbord</span>
+      <span [ngClass]="isUiSidenav ? '' : 'd-block'">{{
+        "menu.dashbord" | translate
+      }}</span>
     </a>
   </li>
   <li class="nav-item">
@@ -25,7 +27,9 @@
       <span class="icon" [ngClass]="isUiSidenav ? 'me-3' : 'mx-3'">
         <app-icon-orders></app-icon-orders>
       </span>
-      <span [ngClass]="isUiSidenav ? '' : 'd-block'">orders</span>
+      <span [ngClass]="isUiSidenav ? '' : 'd-block'">{{
+        "menu.orders" | translate
+      }}</span>
     </a>
   </li>
   <li class="nav-item">
@@ -38,7 +42,9 @@
       <span class="icon" [ngClass]="isUiSidenav ? 'me-3' : 'mx-3'">
         <app-icon-products></app-icon-products>
       </span>
-      <span [ngClass]="isUiSidenav ? '' : 'd-block'">Products</span>
+      <span [ngClass]="isUiSidenav ? '' : 'd-block'">{{
+        "menu.products" | translate
+      }}</span>
     </a>
   </li>
   <li class="nav-item">
@@ -51,7 +57,9 @@
       <span class="icon" [ngClass]="isUiSidenav ? 'me-3' : 'mx-3'">
         <app-icon-customers></app-icon-customers>
       </span>
-      <span [ngClass]="isUiSidenav ? '' : 'd-block'">Customers</span>
+      <span [ngClass]="isUiSidenav ? '' : 'd-block'">{{
+        "menu.customers" | translate
+      }}</span>
     </a>
   </li>
 </ul>

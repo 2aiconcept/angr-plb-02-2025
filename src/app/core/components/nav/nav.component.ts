@@ -5,6 +5,7 @@ import { IconProductsComponent } from '../../../icons/components/icon-products/i
 import { IconCustomersComponent } from '../../../icons/components/icon-customers/icon-customers.component';
 import { NgClass } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav',
@@ -16,6 +17,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     NgClass,
     RouterLink,
     RouterLinkActive,
+    TranslatePipe,
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',

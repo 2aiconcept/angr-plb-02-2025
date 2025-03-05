@@ -25,6 +25,13 @@
       "firstname": "CHRISTOPHE",
       "lastName": "GUEROULT",
       "id": 4
+    },
+    {
+      "email": "christophegueroult4@gmail.com",
+      "password": "$2a$10$jmdWkNUxoD7LDb6ruDxFHeJvY/aKi6WYDtV.5GDEQ02zs./cOsKgq",
+      "firstname": "GUEROULT",
+      "lastName": "CHRISTOPHE",
+      "id": 5
     }
   ],
   "settings": [

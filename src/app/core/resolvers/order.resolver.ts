@@ -1,10 +1,17 @@
 import { inject } from '@angular/core';
-import { ResolveFn } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  ResolveFn,
+  RouterStateSnapshot,
+} from '@angular/router';
 import { catchError, map, of } from 'rxjs';
 import { OrdersService } from '../../features/orders/services/orders.service';
 import { Order } from '../../features/orders/models/order';
 
-export const orderResolver: ResolveFn<Order | null> = (route, state) => {
+export const orderResolver: ResolveFn<Order | null> = (
+  route: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot
+) => {
   const id = route.paramMap.get('id');
   if (!id) {
     // Gérer le cas où l'ID est manquant

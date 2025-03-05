@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { PageSignInComponent } from './page-sign-in.component';
 
 describe('PageSignInComponent', () => {
-  let component: PageSignInComponent;
-  let fixture: ComponentFixture<PageSignInComponent>;
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageSignInComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(PageSignInComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+      imports: [
+        PageSignInComponent, // Composant standalone
+        HttpClientTestingModule, // Fournit HttpClient
+        RouterTestingModule, // Fournit Router si nécessaire
+      ],
+    }).compileComponents();
   });
 
   it('should create', () => {
+    const fixture = TestBed.createComponent(PageSignInComponent);
+    const component = fixture.componentInstance;
     expect(component).toBeTruthy();
   });
 });

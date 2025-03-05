@@ -55,4 +55,8 @@ export class PageOrdersComponent {
   goToEdit(id: string) {
     this.router.navigate(['orders', 'edit', id]);
   }
+
+  delete(id: string) {
+    this.ordersService.delete(id).subscribe();
+  }
 }

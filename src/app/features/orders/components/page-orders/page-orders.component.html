@@ -55,8 +55,14 @@
           </select>
         </td>
         <td>
-          <app-icon-edit class="me-2 icons" (click)="goToEdit(item.id)"></app-icon-edit>
-          <app-icon-delete class="me-2 icons"></app-icon-delete>
+          <app-icon-edit
+            class="me-2 icons"
+            (click)="goToEdit(item.id)"
+          ></app-icon-edit>
+          <app-icon-delete
+            class="me-2 icons"
+            (click)="delete(item.id)"
+          ></app-icon-delete>
         </td>
       </tr>
     </tbody>

@@ -35,26 +35,6 @@
   ],
   "orders": [
     {
-      "unitPrice": 1200,
-      "nbOfDays": 2,
-      "vat": 20,
-      "state": "OPTION",
-      "type": "formation",
-      "customer": "capgemini",
-      "comment": "un commentaire",
-      "id": "1"
-    },
-    {
-      "unitPrice": 1200,
-      "nbOfDays": 2,
-      "vat": 20,
-      "state": "CANCELED",
-      "type": "formation",
-      "customer": "capgemini",
-      "comment": "un commentaire",
-      "id": "e792"
-    },
-    {
       "id": "d453",
       "unitPrice": 1200,
       "nbOfDays": 2,
@@ -68,11 +48,21 @@
       "unitPrice": 500,
       "nbOfDays": 5,
       "vat": 20,
-      "state": "OPTION",
+      "state": "CONFIRMED",
       "type": "Formation",
       "customer": "PLB",
       "comment": "sdfg",
       "id": "fdwknQR"
+    },
+    {
+      "unitPrice": 500,
+      "nbOfDays": 1,
+      "vat": 20,
+      "state": "OPTION",
+      "type": "coaching",
+      "customer": "PLB",
+      "comment": null,
+      "id": "iCWyJ2c"
     }
   ],
   "customers": [
